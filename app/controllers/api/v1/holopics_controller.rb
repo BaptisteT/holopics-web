@@ -18,7 +18,7 @@ class HolopicsController < Api::V1::ApiController
 
     holopics = []
 
-    holopics = Holopic.paginate(page: page, per_page: per_page).order('id DESC')
+    holopics = Holopic.order('id DESC').paginate(page: page, per_page: per_page)
 
     render json: { result: { holopics: holopics } }, status: 200
   end
