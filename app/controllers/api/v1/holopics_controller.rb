@@ -1,4 +1,4 @@
-class HolopicsController < Api::V1::ApiController
+class Api::V1::HolopicsController < Api::V1::ApiController
 
 	def create
     holopic = Holopic.new(holopics_params)
