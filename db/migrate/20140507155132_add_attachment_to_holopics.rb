@@ -1,4 +1,4 @@
-class AddAttachmentAvatarToHolopics < ActiveRecord::Migration
+class AddAttachmentToHolopics < ActiveRecord::Migration
   def self.up
     change_table :holopics do |t|
       t.attachment :avatar
