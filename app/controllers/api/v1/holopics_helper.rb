@@ -3,6 +3,8 @@ class HolopicsController < Api::V1::ApiController
 	def create
     holopic = Holopic.new(holopics_params)
 
+    holopic.avatar = StringIO.new(Base64.decode64(params[:avatar]))
+
     if holopic.save
       render json: { result: { holopic: holopic } }, status: 201
     else 

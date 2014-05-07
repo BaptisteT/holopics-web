@@ -1,5 +1,4 @@
 class Holopic < ActiveRecord::Base
-	validates :image, presence: true
   validates_attachment_presence :avatar
 
   #Interpolation 
