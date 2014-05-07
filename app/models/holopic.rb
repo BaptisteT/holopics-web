@@ -1,6 +1,4 @@
 class Holopic < ActiveRecord::Base
-  validates_attachment_presence :avatar
-
   #Interpolation 
   Paperclip.interpolates :file_name do |attachment, style|
     "image_#{attachment.instance.id.to_s}"
