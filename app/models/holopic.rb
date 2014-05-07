@@ -5,6 +5,6 @@ class Holopic < ActiveRecord::Base
   end
 
   # This method associates the attribute ":avatar" with a file attachment
-  has_attached_file :avatar, styles: { small: '145x220#' }, path: ":style/:file_name"
+  has_attached_file :avatar, path: ":style/:file_name"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 end
