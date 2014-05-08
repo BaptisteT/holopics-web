@@ -20,7 +20,7 @@ class Api::V1::HolopicsController < Api::V1::ApiController
 
     holopics = Holopic.order('id DESC').paginate(page: page, per_page: per_page)
 
-    render json: { result: { holopics: holopics } }, status: 200
+    render json: { result: { holopics: holopics, page: page} }, status: 200
   end
 
 	private 
