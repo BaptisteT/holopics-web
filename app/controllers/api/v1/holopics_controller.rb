@@ -1,7 +1,7 @@
 class Api::V1::HolopicsController < Api::V1::ApiController
 
 	def create
-    holopic = Holopic.new(holopics_params)
+    holopic = Holopic.new
 
     holopic.avatar = StringIO.new(Base64.decode64(params[:avatar]))
 
@@ -23,9 +23,4 @@ class Api::V1::HolopicsController < Api::V1::ApiController
     render json: { result: { holopics: holopics, page: page} }, status: 200
   end
 
-	private 
-
-	  def holopics_params
-	    params.permit(:image)
-	  end
 end
