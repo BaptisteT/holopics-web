@@ -4,7 +4,7 @@ class Api::V1::ShapesController < Api::V1::ApiController
     shape = Shape.new
 
     shape.avatar = StringIO.new(Base64.decode64(params[:avatar]))
-    shape.path = StringIO.new(params[:path])
+    shape.path = params[:path]
 
     if shape.save 
       render json: { result: { shape: shape } }, status: 201
