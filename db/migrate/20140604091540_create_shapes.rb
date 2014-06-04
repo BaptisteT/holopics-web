@@ -1,6 +1,6 @@
-class CreateExamples < ActiveRecord::Migration
+class CreateShapes < ActiveRecord::Migration
   def change
-    create_table :examples do |t|
+    create_table :shapes do |t|
       t.string :path
       t.attachment :avatar
       t.timestamps
