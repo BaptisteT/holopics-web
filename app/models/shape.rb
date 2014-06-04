@@ -7,4 +7,7 @@ class Shape < ActiveRecord::Base
   # This method associates the attribute ":avatar" with a file attachment
   has_attached_file :avatar, path: "shapes/:file_name"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+    # This method associates the attribute ":avatar" with a file attachment
+  has_attached_file :path, path: "shapes/path/:file_name"
 end
